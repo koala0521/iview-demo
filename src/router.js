@@ -1,7 +1,7 @@
 const routers = [{
     path: '/',
     meta: {
-        title: ''
+        title: '首页'
     },
     component: (resolve) => require(['./views/index.vue'], resolve)
 }];
