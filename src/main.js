@@ -7,13 +7,9 @@ import Util from './libs/util';
 import App from './app.vue';
 import 'iview/dist/styles/iview.css';
 
-
 Vue.use(VueRouter);
 
-
 Vue.use(iView);
-
-
 
 // 路由配置
 const RouterConfig = {
