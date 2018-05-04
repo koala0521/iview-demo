@@ -10,9 +10,9 @@ const routers = [
         path:"/infos",
         name:"infos",
         meta:{
-            title:"企业文化"
+            title:"公司信息"
         },
-        component:(resolve) => require(['./views/culture.vue'] , resolve )
+        component:(resolve) => require(['./views/companyInfos.vue'] , resolve )
 
     }
     ,{
@@ -38,6 +38,10 @@ const routers = [
             title:"投资者关系"
         },
         component:(resolve) => require(['./views/investorRelations.vue'] , resolve )
+
+    },{
+        path:"*",
+        redirect:"/"
 
     }
 ];

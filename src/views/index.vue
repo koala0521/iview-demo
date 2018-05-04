@@ -36,11 +36,11 @@
 </style>
 
 <template>
-    <Content>
+    <div>
         <div class="banner-wrap" > 
             <img src="../assets/img/bg.jpg" alt="玩咖">
         </div>
-        <div class="cont-width">        
+            <div class="cont-width">        
                 <Row>
                     <i-col span="6" >
                     <Card title="标题" :bordered="false" :shadow="false" >
@@ -85,9 +85,9 @@
                         </a>
                     </Card>                             
                 </i-col>                                                
-        </Row>
+            </Row>
         </div>
-    </Content>
+    </div>
 </template>
 <script>
     import wHeader from '../componets/header/index';

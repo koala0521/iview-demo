@@ -1,109 +1,73 @@
 <style scoped >
-   .layout{
-        border: 1px solid #d7dde4;
-        background: #fff;
-        position: relative;
-        border-radius: 4px;
-        overflow: hidden;
+   .wrap{
+       padding-top: 30px;
+   }
+   .menu-wrap{
+       /* text-align: right; */
+   }
+   .menu-title{
+       padding: 14px 24px;
+       border: none;
+   }
+    .page-content{
+        padding-left: 30px;
     }
-    .cont-width{
-        width: 1200px;
-        min-width: 1200px;
-        margin: 0 auto;
+    .sub_sider{
+        position: fixed;
+        /* margin-left: 15px; */
+        top: 94px;
+        width: 200px;
+        text-align: right;
     }
-    .layout-nav{
-        width: 420px;
-        margin: 0 auto;
-        margin-right: 20px;
+    .sub_cont{
+        margin-left: 200px;
+        padding-left: 30px;
     }
-    .layout-footer-center{
-        text-align: center;
-    }
-    .ivu-layout{
-        background: #fff;
-    }
-    .banner-wrap{
-        height: 300px;
-        width: 100%;
-        overflow: hidden;
-        margin-bottom: 60px;
-    }
-    .banner-wrap img{
-        width: 100%;
-        height: 100%;
-    }
-
-    /* card样式 */
-    .ivu-card:hover{
-    box-shadow: none;
-    border-color:none;
-    }
-    .ivu-card-body{
-        padding: 0px;
+    .part{
+        height: 500px;
     }
 </style>
-
-
 <template>
-  
-    <Content  :style="{margin: '64px auto', minHeight: '500px'}">
-        <div class="banner-wrap" > 
-            <img src="../assets/img/bg.jpg" alt="玩咖">
+    <div class="wrap" > 
+        <div class="sub_sider" >
+            <div class="menu-title ivu-card-head" >
+                <p>公司信息</p>
+            </div>
+            <Menu active-name="1-1" :style="{ width:'100%' }" > 
+                <MenuItem name="1-1">
+                    <a href="#company_charity">文章管理</a>
+                </MenuItem>
+                <MenuItem name="1-2">
+                    <a href="#company_dev">评论管理</a>    
+                
+                </MenuItem>
+                <MenuItem name="1-3">
+                    <a href="#company_board">举报管理</a>
+                </MenuItem> 
+            </Menu>  
         </div>
-        <div class="cont-width" > 
-        
-                <Row>
-                    <i-col span="6" >
-                    <Card title="标题" :bordered="false" :shadow="false" >
-                        <p slot="title">腾讯简介</p>
-                        <p>
-                            腾讯成立于1998年11月，是目前中国领先的互联网增值服务提供商之一。
-                            成立10多年来，腾讯一直秉承“一切以用户价值为依归”的经营理念，
-                            为亿级海量用户提供稳定优质的各类服务，始终处于稳健发展状态。
-                            2004年6月16日，腾讯控股有限公司在香港联交所主板公开上市(股票代号700)。
-                        </p>
-                        <a href="#" slot="extra" >
-                            更多
-                            <Icon type="ios-arrow-forward"></Icon>
-                            <Icon type="ios-arrow-forward"></Icon>
-                        </a>
-                    </Card>                             
-                </i-col>
-
-                    <i-col span="6"  offset="3" >
-                    <Card title="标题1"  :bordered="false" :shadow="false" >
-                        <p slot="title">腾讯简介</p>
-                        <p>
-                            腾讯成立于1998年11月，是目前中国领先的互联网增值服务提供商之一。
-                            成立10多年来，腾讯一直秉承“一切以用户价值为依归”的经营理念，
-                            为亿级海量用户提供稳定优质的各类服务，始终处于稳健发展状态。
-                            2004年6月16日，腾讯控股有限公司在香港联交所主板公开上市(股票代号700)。
-                        </p>
-                        <a href="#" slot="extra" >
-                            更多 >>
-                        </a>
-                    </Card>                             
-                </i-col>
-                    <i-col span="6" offset="3" >
-                    <Card title="标题2"  :bordered="false" :shadow="false" >
-                        <p slot="title">
-                            <Icon type="ios-film-outline"></Icon>
-                            Classic film
-                        </p>
-                        <a href="#" slot="extra" >
-                            <Icon type="ios-loop-strong"></Icon>
-                            Change
-                        </a>
-                    </Card>                             
-                </i-col>                                                
-        </Row>
-
+        <div class="sub_cont" >
+            <cardList title="文章管理" ></cardList>
+            <cardList title="评论管理" ></cardList>
+            <cardList title="举报管理" ></cardList>
+            <!-- <div class="part" id="company_dev" >22</div>
+            <div class="part" id="company_board" >33</div> -->
         </div>
-    </Content>
-
+            
+    </div>
 </template>
 
 <script>
-    export default {}
+    import cardList from '../componets/card';
+    export default {
+        data(){
+            return {
+
+            }
+        },
+        components:{
+            cardList
+        }
+    }
     
 </script>
