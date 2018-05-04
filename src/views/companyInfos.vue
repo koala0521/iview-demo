@@ -1,4 +1,11 @@
-<style scoped>
+<style scoped >
+   .layout{
+        border: 1px solid #d7dde4;
+        background: #fff;
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+    }
     .cont-width{
         width: 1200px;
         min-width: 1200px;
@@ -12,7 +19,9 @@
     .layout-footer-center{
         text-align: center;
     }
-
+    .ivu-layout{
+        background: #fff;
+    }
     .banner-wrap{
         height: 300px;
         width: 100%;
@@ -32,15 +41,17 @@
     .ivu-card-body{
         padding: 0px;
     }
-
 </style>
 
+
 <template>
-    <Content>
+  
+    <Content  :style="{margin: '64px auto', minHeight: '500px'}">
         <div class="banner-wrap" > 
             <img src="../assets/img/bg.jpg" alt="玩咖">
         </div>
-        <div class="cont-width">        
+        <div class="cont-width" > 
+        
                 <Row>
                     <i-col span="6" >
                     <Card title="标题" :bordered="false" :shadow="false" >
@@ -86,16 +97,13 @@
                     </Card>                             
                 </i-col>                                                
         </Row>
+
         </div>
     </Content>
+
 </template>
+
 <script>
-    import wHeader from '../componets/header/index';
-    import wFooter from '../componets/footer/index';
-    export default {
-        components:{
-            wHeader,
-            wFooter
-        }
-    };
+    export default {}
+    
 </script>

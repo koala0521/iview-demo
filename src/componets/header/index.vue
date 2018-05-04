@@ -31,58 +31,45 @@
     .ivu-layout-header ul:after{
         height: auto;
     }
-
+    .layout-logo .ivu-menu-item-active , .layout-logo .ivu-menu-item-active:hover{
+        border: none
+    }
 </style>
 
 <template>
     <Header :style="{position: 'fixed', width: '100%', top:'0',zIndex:999}">
-        <Menu class="cont-width"  mode="horizontal" theme="light" active-name="1">
-            <div class="layout-logo">
-                <img src="../../assets/img/logo.png" alt="">
+        <Menu 
+            class="cont-width"  
+            mode="horizontal" 
+            theme="light" 
+            :active-name="name"  
+            @on-select="changeRouter" 
+            ref="header_menu"
+        >
+            <div class="layout-logo" @click="tohome" >
+                <img src="../../assets/img/logo.png" alt="玩咖">
             </div>
            
             <div class="layout-nav">
-                <Submenu name="2">
-                    <template slot="title">
-                        <Icon type="stats-bars"></Icon>
-                        公司信息
-                    </template>
-                    <MenuItem name="0-1">新增和启动</MenuItem>
-                    <MenuItem name="0-2">活跃分析</MenuItem>
-                    <MenuItem name="0-3">时段分析</MenuItem>
-                </Submenu>
-                <Submenu name="2">
-                    <template slot="title">
-                        <Icon type="stats-bars"></Icon>
-                        企业文化
-                    </template>
-                    <MenuItem name="1-1">新增和启动</MenuItem>
-                    <MenuItem name="1-2">活跃分析</MenuItem>
-                    <MenuItem name="1-3">时段分析</MenuItem>
-                </Submenu>
-                <Submenu name="3">
-                    <template slot="title">
-                        <Icon type="stats-bars"></Icon>
-                        业务体系
-                    </template>
-                    <MenuItem name="2-1">新增和启动</MenuItem>
-                    <MenuItem name="2-2">活跃分析</MenuItem>
-                    <MenuItem name="2-3">时段分析</MenuItem>
-                    <MenuItem name="2-4">用户留存</MenuItem>
-                    <MenuItem name="2-5">流失用户</MenuItem>
-                </Submenu>
-                <Submenu name="3">
-                    <template slot="title">
-                        <Icon type="stats-bars"></Icon>
-                        投资者关系
-                    </template>
-                    <MenuItem name="3-1">新增和启动</MenuItem>
-                    <MenuItem name="3-2">活跃分析</MenuItem>
-                    <MenuItem name="3-3">时段分析</MenuItem>
-                    <MenuItem name="3-4">用户留存</MenuItem>
-                    <MenuItem name="3-5">流失用户</MenuItem>
-                </Submenu>
+                <MenuItem name="infos">
+                    <Icon type="stats-bars"></Icon>
+                    公司信息                        
+                    <!-- <router-link to="/" >公司信息</router-link> -->
+                </MenuItem>
+                <MenuItem name="culture">
+                    <Icon type="stats-bars"></Icon>
+                    企业文化
 
+                </MenuItem>
+                <MenuItem name="system">
+                    <Icon type="stats-bars"></Icon>
+                    业务体系
+                </MenuItem>
+
+                <MenuItem name="investor">
+                    <Icon type="stats-bars"></Icon> 
+                    投资者关系                   
+                </MenuItem>
             </div>
             <div class="layout-ceiling">
                 <div class="layout-ceiling-main">
@@ -98,8 +85,31 @@
 <script>
     export default{
         data(){
-            return {
-                randomMovieList:[]
+            return {}
+        },
+        computed:{
+            name(){
+                return this.$route.name
+            }
+        },
+        methods:{
+            // 跳转路由
+            changeRouter(name){
+
+                this.$router.push({
+                    name
+                })
+            },
+            tohome(){
+
+                this.$router.push({
+                    name:"index"
+                })
+
+                // 更新导航菜单选中状态
+                this.$nextTick(() => {
+                    this.$refs.header_menu.updateActiveName()
+                })
             }
         }
     }
