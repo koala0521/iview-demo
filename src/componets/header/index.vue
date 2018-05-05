@@ -85,11 +85,11 @@
 <script>
     export default{
         data(){
-            return {}
+            return {};
         },
         computed:{
             name(){
-                return this.$route.name
+                return this.$route.name;
             }
         },
         methods:{
@@ -98,19 +98,19 @@
 
                 this.$router.push({
                     name
-                })
+                });
             },
             tohome(){
 
                 this.$router.push({
-                    name:"index"
-                })
+                    name:'index'
+                });
 
                 // 更新导航菜单选中状态
                 this.$nextTick(() => {
-                    this.$refs.header_menu.updateActiveName()
-                })
+                    this.$refs.header_menu.updateActiveName();
+                });
             }
         }
-    }
+    };
 </script>

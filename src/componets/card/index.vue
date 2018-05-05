@@ -47,45 +47,45 @@ a.txt{
         {
             name: '肖申克的救赎',
             url: 'https://movie.douban.com/subject/1292052/',
-            time: "2018/03/21"
+            time: '2018/03/21'
         },
         {
             name: '这个杀手不太冷',
             url: 'https://movie.douban.com/subject/1295644/',
-            time: "2018/03/21"
+            time: '2018/03/21'
         },
         {
             name: '霸王别姬',
             url: 'https://movie.douban.com/subject/1291546/',
-            time: "2018/03/21"
+            time: '2018/03/21'
         },
         {
             name: '阿甘正传',
             url: 'https://movie.douban.com/subject/1292720/',
-            time: "2018/03/21"
+            time: '2018/03/21'
         },
         {
             name: '美丽人生',
             url: 'https://movie.douban.com/subject/1292063/',
-            time: "2018/03/21"
+            time: '2018/03/21'
         },
         {
             name: '千与千寻',
             url: 'https://movie.douban.com/subject/1291561/',
-            time: "2018/03/21"
+            time: '2018/03/21'
         },
         {
             name: '辛德勒的名单',
             url: 'https://movie.douban.com/subject/1295124/',
-            time: "2018/03/21"
+            time: '2018/03/21'
         }
-    ]
+    ];
     export default {
         props:{
             title:String,
             btntext:{
                 type: String,
-                default: "查看更多"
+                default: '查看更多'
             },
             list:{
                 type:Array,
@@ -97,6 +97,6 @@ a.txt{
 
             }
         }
-    }
+    };
     
 </script>

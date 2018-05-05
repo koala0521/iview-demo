@@ -63,11 +63,11 @@
         data(){
             return {
 
-            }
+            };
         },
         components:{
             cardList
         }
-    }
+    };
     
 </script>
