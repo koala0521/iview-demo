@@ -28,7 +28,7 @@
     }
 </style>
 <template>
-    <div class="wrap" > 
+    <div class="wrap cont-width" > 
         <div class="sub_sider" >
             <div class="menu-title ivu-card-head" >
                 <p>公司信息</p>

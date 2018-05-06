@@ -20,7 +20,7 @@
     <div class="layout">
         <Layout> 
             <wHeader  class="cont-width"  ></wHeader>
-            <Content class="cont-width" :style="{margin: '64px auto', minHeight: '500px'}" >
+            <Content class="" :style="{margin: '64px auto', minHeight: '500px'}" >
 
                 <router-view></router-view>
             

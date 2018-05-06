@@ -1,3 +1,6 @@
+
+import 'babel-polyfill';
+
 import Vue from 'vue';
 import iView from 'iview';
 import VueRouter from 'vue-router';
@@ -11,6 +14,7 @@ import './assets/css/global.css';
 Vue.use(VueRouter);
 
 Vue.use(iView);
+
 
 // 路由配置
 const RouterConfig = {

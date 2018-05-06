@@ -1,6 +1,6 @@
 // 企业文化
 <template>
-  <div>企业文化</div>
+  <div class="cont-width" >企业文化</div>
 </template>
 <script>
     export default{

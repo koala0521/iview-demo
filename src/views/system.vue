@@ -1,7 +1,7 @@
 // 业务体系
 <template>
   
-  <div>业务体系</div>
+  <div class="cont-width" >业务体系</div>
 
 </template>
 <script>
