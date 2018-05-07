@@ -12,6 +12,7 @@
         top: 15px;
         left: 0px;
         margin-right: 100px;
+        cursor: pointer;
     }
     .layout-logo img{
         width: 100%;

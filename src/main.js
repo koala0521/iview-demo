@@ -11,6 +11,11 @@ import App from './app.vue';
 import 'iview/dist/styles/iview.css';
 import './assets/css/global.css';
 
+// 国际化语言切换
+// import VueI18n from 'vue-i18n'
+
+// Vue.use(VueI18n);
+
 Vue.use(VueRouter);
 
 Vue.use(iView);
